@@ -38,6 +38,14 @@ Under a simulated **$2,000\text{ N}$ peak heel-strike load** (80 kg runner basel
 
 ---
 
+### ⚠️ Methodological Note: Linear FEA Assumptions & Non-Linear Scope
+
+**Engineering Note on Large Displacements:**  
+Displacements exceeding the initial $50\text{ mm}$ bounding geometry (e.g., $|\Delta y| = 772.99\text{ mm}$) represent linearized theoretical extrapolations inherent to linear static FEA ($F = Kx$). 
+* **Linear Solver Limitations:** Small-strain linear static analysis does not account for hyperelastic material non-linearity, geometric non-linearity ($\text{NLGEOM}$), or cell-wall self-contact / densification under severe collapse.
+* **Comparative Validity:** Despite unphysical absolute displacement values, linear static FEA serves as an efficient, valid **relative screening tool** to rank initial compliance, stress concentration risks, and SEA trends across candidate topologies prior to non-linear dynamic solvers.
+---
+
 ## Mesh Sensitivity & Convergence Study
 
 ![Mesh Convergence Analysis](assets/FEA_Mesh_Convergence_Slide.png)
