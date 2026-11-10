@@ -3,9 +3,9 @@
 ![Hero Banner](assets/hero%20banner.png)
 
 ## Project Overview
-This repository details a finite element analysis (FEA) and Design for Additive Manufacturing (DfAM) study comparing three thermoplastic polyurethane (TPU) midsole lattice geometries: **Re-entrant Auxetic**, **Hexagonal Honeycomb**, and **Diamond Grid**[cite: 1]. 
+This repository details a finite element analysis (FEA) and Design for Additive Manufacturing (DfAM) study comparing three thermoplastic polyurethane (TPU) midsole lattice geometries: **Re-entrant Auxetic**, **Hexagonal Honeycomb**, and **Diamond Grid**. 
 
-Under a simulated **$2,000\text{ N}$ peak heel-strike load** (80 kg runner baseline), geometries were benchmarked for Specific Energy Absorption (SEA), effective structural stiffness, mass reduction, and mechanical stress distribution[cite: 1].
+Under a simulated **$2,000\text{ N}$ peak heel-strike load** (80 kg runner baseline), geometries were benchmarked for Specific Energy Absorption (SEA), effective structural stiffness, mass reduction, and mechanical stress distribution.
 > 📊 **Executive Resources**: View the slide deck [Project Presentation Deck (PPTX)](docs/Midsole%20analysis.pptx) or download the [1-Page Executive Summary (PDF)](docs/Midsole%20Lattice%20Optimisation%20summary%20.pdf).
 ---
 
@@ -60,6 +60,8 @@ Static stress analysis was executed across $3.0\text{ mm}$, $1.5\text{ mm}$, and
 | **1.0** | 661.59 | +19.97% | High Refinement (Corner Singularity) |
 
 *Note: Un-filleted internal re-entrant corners introduce a theoretical stress singularity in linear static FEA. Adding R = 0.5 mm fillets in future CAD iterations will eliminate localized stress spikes and improve fatigue life.*
+
+(Mesh study run on an earlier load case, used only to select element size.)
 
 ---
 
