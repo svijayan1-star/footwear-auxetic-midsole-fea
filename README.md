@@ -18,23 +18,23 @@ Under a simulated **$2,000\text{ N}$ peak heel-strike load** (80 kg runner basel
 | Metric | Solid Baseline | Re-entrant Auxetic | Hexagonal Honeycomb | Diamond Grid |
 | :--- | :--- | :--- | :--- | :--- |
 | **Bounding Dimensions (mm)** | $50 \times 50 \times 20$ | $47.5 \times 51.5 \times 20$ | $55.7 \times 52.5 \times 20$ | $52.1 \times 52.1 \times 20$ |
-| **Equivalent TPU Mass (g)** | $60.00$ | $23.97$ | $23.31$ | $23.30$ |
-| **Mass Savings vs. Baseline (%)** | $0.0\%$ | $60.1\%$ | **$61.2\%$** | **$61.2\%$** |
-| **Relative Density ($\rho/\rho_s$)** | $1.000$ | $0.388$ | $0.388$ | $0.357$ |
-| **Peak von Mises Stress (MPa)** | — | $3.821$ | **$3.613$** | $4.447$ |
-| **Max Displacement ($\Delta y$, mm)** | — | $-1.412$ | $-1.473$ | $-1.458$ |
-| **Effective Stiffness ($K$, N/mm)** | — | **$1,416.43$** | $1,357.77$ | $1,371.74$ |
-| **Specific Energy Absorption (J/kg)**| — | $58.91$ | **$63.19$** | $62.58$ |
+| **Equivalent TPU Mass (g)** | 60.00 | 23.97 | 23.31 | 23.30 |
+| **Mass Savings vs. Baseline (%)** | 0.0 | 60.1 | 61.2 | 61.2 |
+| **Relative Density ($\rho / \rho_s$)** | 1.000 | 0.388 | 0.388 | 0.357 |
+| **Peak von Mises Stress (MPa)** | — | **551.46** | **453.79** | **394.99** |
+| **Max Displacement ($\Delta y$, mm)** | — | **772.99** | **514.20** | **509.44** |
+| **Effective Stiffness ($K$, N/mm)** | — | **2.59** | **3.89** | **3.93** |
+| **Specific Energy Absorption (J/kg)** | — | **32,248** | **22,059** | **21,864** |
 
 *All variants evaluated at a validated 1.5 mm element mesh baseline*
 
 ---
 
 ## Key Engineering Takeaways
-* **Highest Specific Energy Absorption (SEA)**: **Hexagonal Honeycomb** achieved $63.19\text{ J/kg}$, providing maximum energy damping for heel impact cushion zones.
-* **Maximum Structural Stiffness**: **Re-entrant Auxetic** delivered $1,416.43\text{ N/mm}$ stiffness (lowest compliance), making it ideal for stability-critical zones.
-* **Mass Optimization**: All three lattice topologies achieved >60% mass reduction relative to a solid TPU control block.
-* **Stress Concentrations**: The Diamond Grid exhibited the highest peak stress ($4.447\text{ MPa}$), whereas Honeycomb produced lower stress concentrations across bottom fixed boundary constraints.
+* **Highest Specific Energy Absorption (SEA):** **Re-entrant Auxetic** achieved **32,248 J/kg**, absorbing ~46% more energy under in-plane loading than other topologies due to inward cell-wall bending compliance.
+* **Maximum Structural Stiffness:** **Diamond Grid** delivered **3.93 N/mm** stiffness (lowest compliance), making it optimal for stability-critical midfoot/arch zones.
+* **Stress Optimization:** **Diamond Grid** exhibited the lowest peak von Mises stress (**394.99 MPa**), whereas **Re-entrant Auxetic** concentrated high notch stress (**551.46 MPa**) at internal cell joints, highlighting the need for $R = 0.5\text{ mm}$ fillets.
+* **Mass Optimization:** All three lattice topologies achieved $>60\%$ mass reduction relative to a solid TPU control block.
 
 ---
 
@@ -44,11 +44,12 @@ Under a simulated **$2,000\text{ N}$ peak heel-strike load** (80 kg runner basel
 
 Static stress analysis was executed across $3.0\text{ mm}$, $1.5\text{ mm}$, and $1.0\text{ mm}$ element sizes on the Re-entrant Auxetic structure.
 
+
 | Mesh Size (mm) | Peak Von Mises Stress (MPa) | % Change | Study Status |
-| :--- | :--- | :--- | :--- |
-| **3.0** | 2.818 | Baseline | Under-resolved (oversmoothed corners) |
-| **1.5** | 3.821 | +35.6% | **Optimal Target Mesh (Selected)** |
-| **1.0** | 4.584 | +19.97% | High Refinement (Corner Singularity) |
+| :--- | :---: | :---: | :--- |
+| **3.0** | 406.68 | Baseline | Under-resolved (oversmoothed corners) |
+| **1.5** | **551.46** | +35.6% | **Optimal Target Mesh (Selected)** |
+| **1.0** | 661.59 | +19.97% | High Refinement (Corner Singularity) |
 
 *Note: Un-filleted internal re-entrant corners introduce a theoretical stress singularity in linear static FEA. Adding R = 0.5 mm fillets in future CAD iterations will eliminate localized stress spikes and improve fatigue life.*
 
